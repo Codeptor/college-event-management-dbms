@@ -18,7 +18,7 @@ const Testimonials = () => {
           >
             <div className="w-full mx-10">
               <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-                "Eventify has simplified event management for us. Lorem ipsum
+                "CollegeConnect has simplified event management for us. Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit."
               </p>
               <p className="font-bold text-blue-900 mt-4">
@@ -27,7 +27,7 @@ const Testimonials = () => {
             </div>
             <div className="w-full mx-10">
               <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-                "We love using Eventify! It's user-friendly and efficient. Lorem
+                "We love using CollegeConnect! It's user-friendly and efficient. Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit."
               </p>
               <p className="font-bold text-blue-900 mt-4">

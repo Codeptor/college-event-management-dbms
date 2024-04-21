@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="bg-blue-500 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-xl font-bold">
-          Eventify
+          CollegeConnect
         </Link>
         <ul className="flex space-x-8">
           <li>

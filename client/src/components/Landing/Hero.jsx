@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="bg-gradient-to-b from-blue-500 to-blue-400 py-20 text-white text-center">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-        Welcome to Eventify
+        Welcome to CollegeConnect
       </h1>
       <p className="text-lg md:text-xl lg:text-2xl mb-8">
         Your all-in-one platform for seamless event planning and management
