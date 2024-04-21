@@ -29,6 +29,6 @@ app.get("/", (req, res) => {
   res.send("Welcome to backend of Event Management System!");
 });
 
-app.listen(8080, () => {
+app.listen(8000, () => {
   console.log("Server is running on port 8080");
 });
