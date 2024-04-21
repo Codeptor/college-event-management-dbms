@@ -3,69 +3,55 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-blue-500 p-4">
+    <nav className="bg-gray-900 py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-white text-xl font-bold">
-          CollegeConnect
-        </Link>
-        <ul className="flex space-x-8">
-          <li>
-            <Link
-              to="/home"
-              className="text-white hover:underline hover:underline-offset-2"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/events"
-              className="text-white hover:underline hover:underline-offset-2"
-            >
-              Events
-            </Link>
-          </li>
+        <div className="flex space-x-4">
+          <Link
+            to="/home"
+            className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
+          >
+            Home
+          </Link>
+          <Link
+            to="/events"
+            className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
+          >
+            Events
+          </Link>
           {!localStorage.getItem("userId") && (
-            <li>
+            <>
               <Link
                 to="/login"
-                className="text-white hover:underline hover:underline-offset-2"
+                className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
               >
                 Login
               </Link>
-            </li>
-          )}
-          {!localStorage.getItem("userId") && (
-            <li>
               <Link
                 to="/register"
-                className="text-white hover:underline hover:underline-offset-2"
+                className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
               >
                 Register
               </Link>
-            </li>
+            </>
           )}
           {localStorage.getItem("userId") && (
-            <li>
+            <>
               <Link
                 to="/add-event"
-                className="text-white hover:underline hover:underline-offset-2"
+                className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
               >
                 Add Event
               </Link>
-            </li>
-          )}
-          {localStorage.getItem("userId") && (
-            <li>
               <Link
                 to="/add-venue"
-                className="text-white hover:underline hover:underline-offset-2"
+                className="text-white hover:text-blue-500 transition duration-300 ease-in-out"
               >
                 Add Venue
               </Link>
-            </li>
+            </>
           )}
-        </ul>
+        </div>
+        <div className="flex flex-grow justify-center"></div>
       </div>
     </nav>
   );

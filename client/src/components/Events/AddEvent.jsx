@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Input, Button, Option, Select } from "@material-tailwind/react";
+import { Input, Option, Select } from "@material-tailwind/react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -63,9 +63,9 @@ const AddEventPage = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-8 rounded-lg mt-28 shadow-lg">
-      <h2 className="text-2xl font-bold mb-8">Add New Event</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-y-6">
+    <div className="max-w-md mx-auto shadow-[5px_5px_rgba(0,0,0,_0.4),_10px_10px_rgba(0,0,0,_0.3),_15px_15px_rgba(0,0,0,0.2),_20px_20px_rgba(0,0,0,0.1),_25px_25px_rgba(0,0,0,0.05)] p-8 rounded-lg mt-40 shadow-lg text-black">
+      <h2 className="text-3xl font-bold mb-6 text-center">Add New Event</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-y-4">
         <Input
           type="text"
           label="Event Title"
@@ -74,7 +74,8 @@ const AddEventPage = () => {
           onChange={(e) => setTitle(e.target.value)}
           fullWidth
           required
-          className="mb-4"
+          className="mb-2"
+          color="light"
         />
         <Input
           type="text"
@@ -84,7 +85,8 @@ const AddEventPage = () => {
           onChange={(e) => setDescription(e.target.value)}
           fullWidth
           required
-          className="mb-4"
+          className="mb-2"
+          color="light"
         />
         <Input
           type="datetime-local"
@@ -94,7 +96,8 @@ const AddEventPage = () => {
           onChange={(e) => setStartDate(e.target.value)}
           fullWidth
           required
-          className="mb-4"
+          className="mb-2"
+          color="light"
         />
         <Input
           type="datetime-local"
@@ -104,7 +107,8 @@ const AddEventPage = () => {
           onChange={(e) => setEndDate(e.target.value)}
           fullWidth
           required
-          className="mb-4"
+          className="mb-2"
+          color="light"
         />
         <Select
           size="md"
@@ -112,7 +116,8 @@ const AddEventPage = () => {
           value={selectedVenue}
           onChange={(value) => setSelectedVenue(value)}
           fullWidth
-          className="mb-4"
+          className="mb-2"
+          color="light"
         >
           {venueOptions.map((venue) => (
             <Option key={venue._id} value={venue._id}>
@@ -126,7 +131,8 @@ const AddEventPage = () => {
           value={selectedCategory}
           onChange={(value) => setSelectedCategory(value)}
           fullWidth
-          className="mb-4"
+          className="mb-2"
+          color="light"
         >
           {categoryOptions.map((category) => (
             <Option key={category._id} value={category._id}>
@@ -134,12 +140,18 @@ const AddEventPage = () => {
             </Option>
           ))}
         </Select>
-        <Button type="submit" color="blue" ripple="light" fullWidth>
-          Add Event
-        </Button>
+        <a href="#_" className="relative inline-block text-lg group">
+          <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+            <span className="relative">Add Event</span>
+          </span>
+          <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+        </a>
       </form>
     </div>
   );
-};
+}
 
 export default AddEventPage;
+   

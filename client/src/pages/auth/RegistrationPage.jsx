@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Card,
-  Input,
-  Checkbox,
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import { toast } from "react-toastify";
 import axios from "axios";
 
@@ -21,7 +15,7 @@ const RegistrationPage = () => {
         email,
         password,
       });
-      if(res.status === 201){
+      if (res.status === 201) {
         setUsername("");
         setEmail("");
         setPassword("");
@@ -35,51 +29,51 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100 text-left">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+    <div className="flex justify-center items-center h-screen bg-gray-900 text-white">
+      <div className="bg-gray-100 shadow-lg rounded-lg p-8 w-full max-w-md">
         <Card color="transparent" shadow={false}>
-          <Typography variant="h4" color="blue-gray">
+          <Typography variant="h4" color="gray-900">
             Sign Up
           </Typography>
-          <Typography color="gray" className="mt-1 font-normal">
+          <Typography color="gray-700" className="mt-1 font-normal">
             Nice to meet you! Enter your details to register.
           </Typography>
           <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
             <div className="mb-1 flex flex-col gap-6">
-              <Typography variant="h6" color="blue-gray" className="-mb-3">
+              <Typography variant="h6" color="gray-900" className="-mb-3">
                 Username
               </Typography>
               <Input
                 size="lg"
                 placeholder="john_doe"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                className="border-gray-200 focus:border-gray-900"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
-              <Typography variant="h6" color="blue-gray" className="-mb-3">
+              <Typography variant="h6" color="gray-900" className="-mb-3">
                 Email
               </Typography>
               <Input
                 size="lg"
                 placeholder="name@mail.com"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                className="border-gray-200 focus:border-gray-900"
                 labelProps={{
-                  className: "before:content-none after:content-none ",
+                  className: "before:content-none after:content-none",
                 }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <Typography variant="h6" color="blue-gray" className="-mb-3">
+              <Typography variant="h6" color="gray-900" className="-mb-3">
                 Password
               </Typography>
               <Input
                 type="password"
                 size="lg"
                 placeholder="********"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                className="border-gray-200 focus:border-gray-900"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
@@ -91,7 +85,7 @@ const RegistrationPage = () => {
               label={
                 <Typography
                   variant="small"
-                  color="gray"
+                  color="gray-700"
                   className="flex items-center font-normal"
                 >
                   I agree the
@@ -114,7 +108,7 @@ const RegistrationPage = () => {
             >
               Sign Up
             </Button>
-            <Typography color="gray" className="mt-4 text-center font-normal">
+            <Typography color="gray-700" className="mt-4 text-center font-normal">
               Already have an account?{" "}
               <a href="/login" className="font-medium text-gray-900 underline underline-offset-2">
                 Sign In

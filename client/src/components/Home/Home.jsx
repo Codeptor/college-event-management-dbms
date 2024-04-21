@@ -46,12 +46,10 @@ const Home = () => {
     fetchOngoingEvents();
   }, []);
 
-  console.log(registeredEvents);
-
   return (
-    <div className="container mx-auto mt-8 text-start">
+    <div className="container mx-auto mt-8 text-white">
       <div className="mb-8">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
+        <Typography variant="h2" color="gray" className="mb-4">
           Registered Events
         </Typography>
         {registeredEvents.length === 0 ? (
@@ -61,8 +59,8 @@ const Home = () => {
         ) : (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {registeredEvents.map((event) => (
-              <Card key={event._id} className="p-4 text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Card key={event._id} className="p-4 text-center bg-gray-800">
+                <Typography variant="h5" color="blue" className="mb-2">
                   {event.title}
                 </Typography>
                 <Typography variant="body" color="gray" className="mb-4">
@@ -104,7 +102,7 @@ const Home = () => {
       </div>
 
       <div>
-        <Typography variant="h2" color="blue-gray" className="mb-4">
+        <Typography variant="h2" color="gray" className="mb-4">
           Ongoing Events
         </Typography>
         {ongoingEvents?.length === 0 ? (
@@ -114,8 +112,8 @@ const Home = () => {
         ) : (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {ongoingEvents.map((event) => (
-              <Card key={event._id} className="p-4 text-center">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+              <Card key={event._id} className="p-4 text-center bg-gray-800">
+                <Typography variant="h5" color="blue" className="mb-2">
                   {event.title}
                 </Typography>
                 <Typography variant="body" color="gray" className="mb-4">
